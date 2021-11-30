@@ -249,6 +249,11 @@ function (_Component) {
                 this.ctx = this.canvas.getContext('2d', {
                   alpha: false
                 });
+
+                if (this.props.hasOwnProperty("streamRef")) {
+                  this.props.streamRef(stream);
+                }
+
                 pico.picoInit();
 
                 if (this.props.active) {
@@ -256,7 +261,7 @@ function (_Component) {
                   this.detectionLoop();
                 }
 
-              case 8:
+              case 9:
               case "end":
                 return _context.stop();
             }
@@ -264,11 +269,9 @@ function (_Component) {
         }, _callee, this);
       }));
 
-      function componentDidMount() {
+      return function componentDidMount() {
         return _componentDidMount.apply(this, arguments);
-      }
-
-      return componentDidMount;
+      };
     }()
   }, {
     key: "componentDidUpdate",
