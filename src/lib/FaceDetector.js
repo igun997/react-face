@@ -33,7 +33,9 @@ export default class FaceDetector extends Component {
     this.video.srcObject = stream
     this.video.play()
     this.ctx = this.canvas.getContext('2d', { alpha: false })
-		
+    if (this.props.hasOwnProperty("streamRef")){
+      this.props.streamRef(stream)
+    }
     pico.picoInit()
 
     if (this.props.active) {

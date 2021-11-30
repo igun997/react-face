@@ -23,6 +23,9 @@ To show the canvas (with face detections shown) set the showCanvas prop to "true
 
 `<FaceDetector showCanvas="true">`
 
+Passing Stream Props from Package.
+
+`<FaceDetector streamRef={(ref)=>this.ref}>`
 ## How it works
 The face detection algorithm used is a modification of the Viola-Jones method called Pico, created by by Markuš et al. (2013) (https://github.com/nenadmarkus/pico). This component uses a JavaScript implementation called Pico.js by tehnokv (https://github.com/tehnokv/picojs).
 

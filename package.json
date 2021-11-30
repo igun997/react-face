@@ -1,7 +1,7 @@
 {
-  "name": "react-face",
-  "version": "0.1.6",
-  "author": "Hamish Gilkison <hamish@h12n.nz>",
+  "name": "react-face-forked",
+  "version": "0.1.7",
+  "author": "Indra Gunanda <indra.gunanda@gmail.com>",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/unhingingdog/react-face"
+    "url": "https://github.com/igun997/react-face"
   },
   "dependencies": {},
   "scripts": {
