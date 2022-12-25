@@ -236,13 +236,14 @@ function (_Component) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
+                _context.prev = 0;
+                _context.next = 3;
                 return navigator.mediaDevices.getUserMedia({
                   video: true,
                   audio: false
                 });
 
-              case 2:
+              case 3:
                 stream = _context.sent;
                 this.video.srcObject = stream;
                 this.video.play();
@@ -261,12 +262,25 @@ function (_Component) {
                   this.detectionLoop();
                 }
 
-              case 9:
+                _context.next = 16;
+                break;
+
+              case 12:
+                _context.prev = 12;
+                _context.t0 = _context["catch"](0);
+
+                if (this.props.hasOwnProperty("isError")) {
+                  this.props.isError(true);
+                }
+
+                console.log('error', _context.t0);
+
+              case 16:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this);
+        }, _callee, this, [[0, 12]]);
       }));
 
       return function componentDidMount() {
